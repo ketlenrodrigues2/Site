@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>by / ketlen rodrigues — E-commerce de moda, pronto pra vender</title>
+<meta name="description" content="Desenvolvimento de e-commerce de moda com olhar fashion, estratégia e CRO. Lojas prontas em 7 dias úteis, a partir de R$597,00, por Ketlen Rodrigues.">
+<meta name="keywords" content="e-commerce de moda, criação de loja virtual, Nuvemshop, Tray, Yampi, Wbuy, Bagy, marketing de moda, Ketlen Rodrigues">
+<meta property="og:title" content="by / ketlen rodrigues — E-commerce de moda, pronto pra vender">
+<meta property="og:description" content="Lojas online desenhadas com olhar de moda e estratégia de conversão.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          borgonha: '#591427',
+          manteiga: '#FFF1B5',
+          rosa: '#D9A9B4',
+          mogno: '#321912',
+          offwhite: '#FFFDF0',
+          linha: '#E4DCC8',
+          tagcolor: '#8A7A55',
+        },
+        fontFamily: {
+          sans: ['Hanken Grotesk', 'sans-serif'],
+          serif: ['Instrument Serif', 'serif'],
+        },
+      },
+    },
+  };
+</script>
+<style>
+  :root{
+    --borgonha:#591427;
+    --manteiga:#FFF1B5;
+    --rosa:#D9A9B4;
+    --mogno:#321912;
+    --offwhite:#FFFDF0;
+    --linha:#E4DCC8;
+    --tag:#8A7A55;
+  }
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--offwhite);
+    font-family:'Hanken Grotesk',sans-serif;
+    color:var(--mogno);
+  }
+  .serif-italic{font-family:'Instrument Serif',serif;font-style:italic;}
+  .tag-label{
+    font-family:'Hanken Grotesk',sans-serif;
+    font-size:0.7rem;
+    letter-spacing:0.24em;
+    text-transform:uppercase;
+    color:var(--tag);
+    font-weight:500;
+  }
+  .reveal{
+    opacity:0;
+    transform:translateY(24px);
+    transition:opacity 0.9s ease, transform 0.9s ease;
+  }
+  .reveal.is-visible{
+    opacity:1;
+    transform:translateY(0);
+  }
+  .btn-flat{
+    display:inline-block;
+    background:var(--borgonha);
+    color:var(--offwhite);
+    font-size:0.75rem;
+    letter-spacing:0.2em;
+    text-transform:uppercase;
+    padding:1rem 2.25rem;
+    border:1px solid var(--borgonha);
+    transition:background 0.3s ease, color 0.3s ease;
+  }
+  .btn-flat:hover{
+    background:var(--mogno);
+    border-color:var(--mogno);
+  }
+  .btn-outline{
+    display:inline-block;
+    border:1px solid var(--borgonha);
+    color:var(--borgonha);
+    font-size:0.68rem;
+    letter-spacing:0.2em;
+    text-transform:uppercase;
+    padding:0.65rem 1.4rem;
+    transition:background 0.3s ease, color 0.3s ease;
+  }
+  .btn-outline:hover{
+    background:var(--borgonha);
+    color:var(--offwhite);
+  }
+  .step-number{
+    font-family:'Instrument Serif',serif;
+    font-style:italic;
+    color:var(--borgonha);
+    line-height:1;
+  }
+</style>
+</head>
+<body class="antialiased">
+
+<!-- HEADER -->
+<header class="fixed top-0 left-0 w-full z-50 bg-offwhite border-b border-linha">
+  <div class="max-w-6xl mx-auto flex items-center justify-between px-6 md:px-12 py-4">
+    <a href="#top" class="flex items-baseline gap-1 leading-none" aria-label="by / ketlen rodrigues — início">
+      <span class="font-light text-xl md:text-2xl text-borgonha">by /</span>
+      <span class="serif-italic text-xl md:text-2xl text-borgonha">ketlen rodrigues</span>
+    </a>
+    <a href="https://wa.me/5532998414846?text=Ol%C3%A1%20Ketlen,%20quero%20criar%20meu%20e-commerce%20de%20moda!" target="_blank" rel="noopener" class="btn-outline">
+      Fale comigo
+    </a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="top" class="pt-36 md:pt-44 pb-20 md:pb-28 px-6 md:px-12 bg-offwhite">
+  <div class="max-w-5xl mx-auto text-center">
+    <p class="tag-label mb-6">fashion e-commerce <span class="text-borgonha">☆</span> marketing</p>
+    <h1 class="font-light text-4xl md:text-6xl leading-[1.1] tracking-tight text-mogno reveal">
+      E-commerce de <span class="serif-italic text-borgonha">moda</span>,<br class="hidden md:block"> pronto pra <span class="serif-italic text-borgonha">vender</span>.
+    </h1>
+    <p class="mt-8 max-w-xl mx-auto text-base md:text-lg text-mogno/70 reveal">
+      Lojas online desenhadas com olhar de moda e estratégia de conversão — para marcas que querem vender mais e parecer exatamente quem são.
+    </p>
+    <div class="mt-10 reveal">
+      <a href="https://wa.me/5532998414846?text=Ol%C3%A1%20Ketlen,%20quero%20criar%20meu%20e-commerce%20de%20moda!" target="_blank" rel="noopener" class="btn-flat">
+        Quero meu e-commerce
+      </a>
+    </div>
+    <p class="tag-label mt-10 reveal">7 dias úteis <span class="text-borgonha">☆</span> a partir de r$597,00</p>
+  </div>
+</section>
+
+<!-- SOBRE KETLEN -->
+<section class="border-t border-linha py-20 md:py-28 px-6 md:px-12">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-14 md:gap-16 items-start">
+    <div class="reveal">
+      <div class="relative aspect-[3/4] w-full max-w-md mx-auto md:mx-0 border border-linha bg-[#F3EEDC] flex items-center justify-center" role="img" aria-label="Retrato editorial de Ketlen Rodrigues">
+        <span class="serif-italic text-6xl text-borgonha/30">kr</span>
+        <span class="absolute bottom-4 left-4 tag-label">retrato ☆ 01</span>
+      </div>
+    </div>
+    <div class="reveal">
+      <p class="tag-label mb-4">sobre ketlen</p>
+      <h2 class="font-light text-3xl md:text-5xl text-mogno mb-8">Prazer, <span class="serif-italic text-borgonha">Ketlen</span>.</h2>
+      <p class="text-mogno/80 leading-relaxed mb-5">
+        Empreendedora apaixonada por moda, sou a mente criativa por trás da <span class="serif-italic text-borgonha text-lg">Sarango Swim</span>, marca que fundei em 2018. Desde então, venho construindo uma trajetória no marketing e e-commerce, unindo experiência prática e formação na área.
+      </p>
+      <p class="text-mogno/80 leading-relaxed mb-10">
+        Já fiz diversos cursos e trabalho diretamente com estratégias digitais para fortalecer marcas e aumentar vendas — sempre unindo criatividade e <span class="serif-italic text-borgonha text-lg">estratégia</span>.
+      </p>
+      <div class="grid grid-cols-3 divide-x divide-linha border-t border-linha pt-6">
+        <div class="pr-4">
+          <p class="text-2xl font-light text-borgonha">2018</p>
+          <p class="tag-label mt-1">fundação sarango swim</p>
+        </div>
+        <div class="px-4">
+          <p class="text-2xl font-light text-borgonha">CRO</p>
+          <p class="tag-label mt-1">e SEO aplicados</p>
+        </div>
+        <div class="pl-4">
+          <p class="text-2xl font-light text-borgonha">☆</p>
+          <p class="tag-label mt-1">olhar fashion</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VANTAGENS / DIFERENCIAIS -->
+<section class="border-t border-linha py-20 md:py-28 px-6 md:px-12">
+  <div class="max-w-5xl mx-auto">
+    <p class="tag-label mb-4 reveal">vantagens dessa parceria</p>
+    <h2 class="font-light text-3xl md:text-5xl text-mogno mb-14 reveal">Por que trabalhar <span class="serif-italic text-borgonha">comigo</span>.</h2>
+    <div class="divide-y divide-linha border-t border-b border-linha">
+      <div class="grid md:grid-cols-[100px_1fr_2fr] gap-4 md:gap-10 py-10 items-start reveal">
+        <span class="step-number text-4xl">01</span>
+        <p class="tag-label">Análise Estratégica</p>
+        <p class="text-mogno/80 leading-relaxed">Antes de qualquer linha de código, faço uma análise do seu negócio para entender posicionamento, valores e identidade visual — garantindo que tudo esteja alinhado com o que sua marca transmite.</p>
+      </div>
+      <div class="grid md:grid-cols-[100px_1fr_2fr] gap-4 md:gap-10 py-10 items-start reveal">
+        <span class="step-number text-4xl">02</span>
+        <p class="tag-label">Acompanhamento Próximo</p>
+        <p class="text-mogno/80 leading-relaxed">Comunicação clara e transparente do início ao fim. Você acompanha cada etapa de perto, com espaço para dúvidas e feedback sempre que precisar.</p>
+      </div>
+      <div class="grid md:grid-cols-[100px_1fr_2fr] gap-4 md:gap-10 py-10 items-start reveal">
+        <span class="step-number text-4xl">03</span>
+        <p class="tag-label">Olhar Fashion &amp; Conversão</p>
+        <p class="text-mogno/80 leading-relaxed">Personalização que vai além do visual: estratégia, experiência de compra e otimização pensadas para o seu público — com CRO e SEO aplicados desde o primeiro dia.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section class="border-t border-linha py-20 md:py-28 px-6 md:px-12 bg-offwhite">
+  <div class="max-w-5xl mx-auto">
+    <p class="tag-label mb-4 reveal">como funciona</p>
+    <h2 class="font-light text-3xl md:text-5xl text-mogno mb-14 reveal">Do briefing ao <span class="serif-italic text-borgonha">lançamento</span>.</h2>
+    <div class="border-t border-linha">
+      <div class="flex flex-col md:flex-row gap-4 md:gap-10 py-10 border-b border-linha reveal">
+        <span class="step-number text-5xl md:text-6xl w-24 shrink-0">01</span>
+        <div>
+          <p class="tag-label mb-2">Briefing</p>
+          <p class="text-mogno/80 leading-relaxed max-w-2xl">Envio um formulário direcionado para entender seus gostos, expectativas e objetivos antes de começar o projeto.</p>
+        </div>
+      </div>
+      <div class="flex flex-col md:flex-row gap-4 md:gap-10 py-10 border-b border-linha reveal">
+        <span class="step-number text-5xl md:text-6xl w-24 shrink-0">02</span>
+        <div>
+          <p class="tag-label mb-2">Análise de Marca</p>
+          <p class="text-mogno/80 leading-relaxed max-w-2xl">Estudo posicionamento, público e identidade visual para alinhar cada decisão à essência da sua marca.</p>
+        </div>
+      </div>
+      <div class="flex flex-col md:flex-row gap-4 md:gap-10 py-10 border-b border-linha reveal">
+        <span class="step-number text-5xl md:text-6xl w-24 shrink-0">03</span>
+        <div>
+          <p class="tag-label mb-2">Desenvolvimento Visual</p>
+          <p class="text-mogno/80 leading-relaxed max-w-2xl">Personalização do layout, banners, vitrines e páginas institucionais dentro da plataforma escolhida.</p>
+        </div>
+      </div>
+      <div class="flex flex-col md:flex-row gap-4 md:gap-10 py-10 border-b border-linha reveal">
+        <span class="step-number text-5xl md:text-6xl w-24 shrink-0">04</span>
+        <div>
+          <p class="tag-label mb-2">Testes CRO/SEO</p>
+          <p class="text-mogno/80 leading-relaxed max-w-2xl">Títulos, descrições e páginas otimizados com boas práticas de SEO e CRO para transformar visitas em vendas.</p>
+        </div>
+      </div>
+      <div class="flex flex-col md:flex-row gap-4 md:gap-10 py-10 reveal">
+        <span class="step-number text-5xl md:text-6xl w-24 shrink-0">05</span>
+        <div>
+          <p class="tag-label mb-2">Lançamento &amp; Suporte</p>
+          <p class="text-mogno/80 leading-relaxed max-w-2xl">Loja no ar em até 7 dias úteis, com 1 mês de suporte para ajustes e correções após a entrega.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- O QUE ESTÁ INCLUSO -->
+<section class="border-t border-linha py-20 md:py-28 px-6 md:px-12">
+  <div class="max-w-5xl mx-auto">
+    <p class="tag-label mb-4 reveal">o que está incluso</p>
+    <h2 class="font-light text-3xl md:text-5xl text-mogno mb-14 reveal">Tudo pronto pra <span class="serif-italic text-borgonha">vender</span>.</h2>
+    <div class="grid md:grid-cols-2 border border-linha reveal">
+      <div class="p-8 md:p-10 md:border-r border-linha border-b md:border-b-0">
+        <p class="tag-label mb-6">estrutura &amp; design</p>
+        <ul class="space-y-4 text-mogno/80">
+          <li class="flex gap-3"><span class="text-borgonha">☆</span> Personalização do layout na plataforma escolhida</li>
+          <li class="flex gap-3"><span class="text-borgonha">☆</span> Banners de página inicial, categorias e rodapé</li>
+          <li class="flex gap-3"><span class="text-borgonha">☆</span> Páginas institucionais (sobre, trocas e devoluções, contato)</li>
+          <li class="flex gap-3"><span class="text-borgonha">☆</span> Vitrines de produto e destaques</li>
+          <li class="flex gap-3"><span class="text-borgonha">☆</span> Checkout, categorias, best-sellers e lançamentos</li>
+          <li class="flex gap-3"><span class="text-borgonha">☆</span> Cadastro dos primeiros 4 produtos no site</li>
+        </ul>
+      </div>
+      <div class="p-8 md:p-10">
+        <p class="tag-label mb-6">plataformas atendidas</p>
+        <div class="flex flex-wrap gap-3 mb-10">
+          <span class="border border-mogno/30 text-mogno text-xs uppercase tracking-widest px-4 py-2">Nuvemshop</span>
+          <span class="border border-mogno/30 text-mogno text-xs uppercase tracking-widest px-4 py-2">Tray</span>
+          <span class="border border-mogno/30 text-mogno text-xs uppercase tracking-widest px-4 py-2">Yampi</span>
+          <span class="border border-mogno/30 text-mogno text-xs uppercase tracking-widest px-4 py-2">Wbuy</span>
+          <span class="border border-mogno/30 text-mogno text-xs uppercase tracking-widest px-4 py-2">Bagy</span>
+        </div>
+        <p class="tag-label mb-4">marketing &amp; SEO</p>
+        <ul class="space-y-3 text-mogno/80 text-sm">
+          <li class="flex gap-3"><span class="text-borgonha">☆</span> Cupons de desconto, promoções e carrinho abandonado</li>
+          <li class="flex gap-3"><span class="text-borgonha">☆</span> Botões de compartilhamento e e-mails transacionais</li>
+          <li class="flex gap-3"><span class="text-borgonha">☆</span> 1 mês de suporte para correção de bugs</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFÓLIO -->
+<section class="border-t border-linha py-20 md:py-28 px-6 md:px-12 bg-offwhite">
+  <div class="max-w-5xl mx-auto">
+    <p class="tag-label mb-4 reveal">portfólio de projetos</p>
+    <h2 class="font-light text-3xl md:text-5xl text-mogno mb-14 reveal">Marcas que já <span class="serif-italic text-borgonha">venderam</span> mais.</h2>
+    <div class="grid md:grid-cols-2 gap-px bg-linha border border-linha">
+      <a href="https://www.sarango.com.br" target="_blank" rel="noopener" class="group bg-offwhite p-8 md:p-10 block">
+        <div class="aspect-video border border-linha bg-[#F6F1E4] flex items-center justify-center mb-6" role="img" aria-label="Prévia do site Sarango Swim">
+          <span class="serif-italic text-3xl text-borgonha/40">sarango</span>
+        </div>
+        <p class="tag-label mb-1">moda &amp; beachwear</p>
+        <p class="text-lg text-mogno">sarango.com.br</p>
+        <span class="text-sm text-borgonha opacity-0 group-hover:opacity-100 transition-opacity">Ver projeto →</span>
+      </a>
+      <a href="https://www.baeloja.com.br" target="_blank" rel="noopener" class="group bg-offwhite p-8 md:p-10 block">
+        <div class="aspect-video border border-linha bg-[#F6F1E4] flex items-center justify-center mb-6" role="img" aria-label="Prévia do site Baé Loja">
+          <span class="serif-italic text-3xl text-borgonha/40">baé loja</span>
+        </div>
+        <p class="tag-label mb-1">cosméticos</p>
+        <p class="text-lg text-mogno">baeloja.com.br</p>
+        <span class="text-sm text-borgonha opacity-0 group-hover:opacity-100 transition-opacity">Ver projeto →</span>
+      </a>
+      <a href="https://disleycosmeticos.com.br" target="_blank" rel="noopener" class="group bg-offwhite p-8 md:p-10 block">
+        <div class="aspect-video border border-linha bg-[#F6F1E4] flex items-center justify-center mb-6" role="img" aria-label="Prévia do site Disley Cosméticos">
+          <span class="serif-italic text-3xl text-borgonha/40">disley</span>
+        </div>
+        <p class="tag-label mb-1">beleza</p>
+        <p class="text-lg text-mogno">disleycosmeticos.com.br</p>
+        <span class="text-sm text-borgonha opacity-0 group-hover:opacity-100 transition-opacity">Ver projeto →</span>
+      </a>
+      <a href="https://www.magnoliasmug.com.br" target="_blank" rel="noopener" class="group bg-offwhite p-8 md:p-10 block">
+        <div class="aspect-video border border-linha bg-[#F6F1E4] flex items-center justify-center mb-6" role="img" aria-label="Prévia do site Magnólias Mug">
+          <span class="serif-italic text-3xl text-borgonha/40">magnólias</span>
+        </div>
+        <p class="tag-label mb-1">home &amp; lifestyle</p>
+        <p class="text-lg text-mogno">magnoliasmug.com.br</p>
+        <span class="text-sm text-borgonha opacity-0 group-hover:opacity-100 transition-opacity">Ver projeto →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!--
+  NOTA: os depoimentos abaixo são placeholders editoriais para exemplificar o layout.
+  Substitua pelos depoimentos reais de suas clientes antes de publicar o site.
+-->
+<!-- DEPOIMENTOS -->
+<section class="border-t border-linha py-20 md:py-28 px-6 md:px-12 bg-manteiga">
+  <div class="max-w-5xl mx-auto">
+    <p class="tag-label mb-4 reveal">o que dizem</p>
+    <h2 class="font-light text-3xl md:text-5xl text-mogno mb-14 reveal">Clientes que <span class="serif-italic text-borgonha">confiaram</span>.</h2>
+    <div class="grid md:grid-cols-3 gap-10 md:gap-12">
+      <div class="reveal">
+        <p class="text-borgonha text-lg mb-4">☆☆☆☆☆</p>
+        <p class="serif-italic text-xl text-mogno leading-relaxed mb-6">"Do briefing ao lançamento, senti que a Ketlen entendeu a essência da minha marca antes de desenhar qualquer tela."</p>
+        <p class="tag-label">cliente ☆ e-commerce de moda</p>
+      </div>
+      <div class="reveal">
+        <p class="text-borgonha text-lg mb-4">☆☆☆☆☆</p>
+        <p class="serif-italic text-xl text-mogno leading-relaxed mb-6">"O acompanhamento próximo fez toda diferença. Cada etapa foi conversada, e o resultado ficou muito acima do esperado."</p>
+        <p class="tag-label">cliente ☆ e-commerce de beleza</p>
+      </div>
+      <div class="reveal">
+        <p class="text-borgonha text-lg mb-4">☆☆☆☆☆</p>
+        <p class="serif-italic text-xl text-mogno leading-relaxed mb-6">"A loja saiu no prazo, com um layout que realmente parece a nossa marca — e já converteu desde a primeira semana."</p>
+        <p class="tag-label">cliente ☆ home &amp; lifestyle</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INVESTIMENTO & CTA FINAL -->
+<section class="border-t border-linha py-20 md:py-28 px-6 md:px-12 bg-borgonha text-offwhite">
+  <div class="max-w-4xl mx-auto text-center">
+    <p class="tag-label mb-4 reveal" style="color:#D9A9B4;">investimento</p>
+    <h2 class="font-light text-3xl md:text-5xl mb-4 reveal">Vamos criar sua <span class="serif-italic" style="color:#FFF1B5;">loja</span>.</h2>
+    <p class="max-w-xl mx-auto text-offwhite/70 mb-14 reveal">Com criatividade, estratégia e dedicação, vou ajudar você a construir uma plataforma que reflete sua marca e potencializa suas vendas.</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-offwhite/20 border-y border-offwhite/20 mb-14 reveal">
+      <div class="py-8 px-4">
+        <p class="text-3xl font-light" style="color:#FFF1B5;">7 dias úteis</p>
+        <p class="tag-label mt-2" style="color:#D9A9B4;">prazo de entrega</p>
+      </div>
+      <div class="py-8 px-4">
+        <p class="text-3xl font-light" style="color:#FFF1B5;">1 mês</p>
+        <p class="tag-label mt-2" style="color:#D9A9B4;">de suporte incluso</p>
+      </div>
+      <div class="py-8 px-4">
+        <p class="text-3xl font-light" style="color:#FFF1B5;">a partir de R$597</p>
+        <p class="tag-label mt-2" style="color:#D9A9B4;">pix ou 6x r$110,97</p>
+      </div>
+    </div>
+    <a href="https://wa.me/5532998414846?text=Ol%C3%A1%20Ketlen,%20quero%20criar%20meu%20e-commerce%20de%20moda!" target="_blank" rel="noopener" class="inline-block reveal" style="background:#FFF1B5; color:#591427; font-size:0.8rem; letter-spacing:0.2em; text-transform:uppercase; padding:1.15rem 3rem;">
+      Quero criar meu e-commerce
+    </a>
+  </div>
+</section>
+
+<!-- RODAPÉ -->
+<footer class="border-t border-linha py-14 px-6 md:px-12 bg-offwhite text-center">
+  <a href="#top" class="inline-flex items-baseline gap-1 leading-none justify-center" aria-label="by / ketlen rodrigues">
+    <span class="font-light text-xl text-borgonha">by /</span>
+    <span class="serif-italic text-xl text-borgonha">ketlen rodrigues</span>
+  </a>
+  <p class="tag-label mt-3">fashion e-commerce <span class="text-borgonha">☆</span> marketing</p>
+  <p class="text-xs text-mogno/50 mt-8">© 2026 Ketlen Rodrigues — Todos os direitos reservados.</p>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var revealEls = document.querySelectorAll('.reveal');
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+    revealEls.forEach(function (el) {
+      observer.observe(el);
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -532,16 +532,13 @@
 </section>
 
 <!--
-  AVALIAÇÕES DO GOOGLE — configuração necessária.
-  Edite os valores em GOOGLE_REVIEWS_CONFIG no <script> perto do fim do arquivo:
-  1) apiKey  — API key do Google Cloud com a "Maps JavaScript API" ativada,
-     restrita ao domínio do seu site (Credenciais > restringir por referenciador HTTP).
-  2) placeId — o Place ID do seu negócio. Encontre em:
-     https://developers.google.com/maps/documentation/places/web-service/place-id
-  3) mapsUrl — link direto do seu perfil no Google Maps (para o botão "Ver todas").
-  Enquanto isso não for configurado, a seção mostra um estado de fallback.
+  DEPOIMENTOS — curadoria manual.
+  Substitua o texto, nome e nicho de cada card abaixo pelas avaliações reais que você
+  quiser destacar (copie o texto de avaliações do seu Google, ou de mensagens de clientes).
+  Para adicionar mais cards, copie um bloco <div class="card p-7">...</div> e cole antes
+  do </div> que fecha a grid. O grid se ajusta automaticamente (3 colunas no desktop).
 -->
-<!-- DEPOIMENTOS / GOOGLE REVIEWS -->
+<!-- DEPOIMENTOS -->
 <section id="depoimentos" class="py-20 md:py-28 px-6 md:px-12 bg-manteiga/50">
   <div class="max-w-5xl mx-auto">
     <div class="text-center mb-10">
@@ -549,48 +546,51 @@
       <h2 class="font-extrabold text-3xl md:text-5xl text-mogno reveal">Clientes que <span class="serif-italic font-normal text-borgonha">confiaram</span>.</h2>
     </div>
 
-    <div id="google-reviews-summary" class="flex flex-col items-center gap-2 mb-10 reveal"></div>
-
-    <div id="google-reviews-grid" class="grid md:grid-cols-3 gap-6">
-      <div class="card p-7 animate-pulse">
+    <div class="grid md:grid-cols-3 gap-6 mb-10">
+      <div class="card p-7 reveal">
         <div class="flex items-center gap-3 mb-4">
-          <span class="avatar-circle bg-mogno/10"></span>
-          <div class="flex-1">
-            <div class="h-3 w-24 bg-mogno/10 rounded mb-2"></div>
-            <div class="h-2 w-16 bg-mogno/10 rounded"></div>
+          <span class="avatar-circle bg-rosa/30 text-borgonha">EM</span>
+          <div>
+            <p class="font-bold text-mogno text-sm leading-none">Cliente</p>
+            <p class="tag-label text-[0.6rem] mt-1">e-commerce de moda</p>
           </div>
         </div>
-        <div class="h-3 w-full bg-mogno/10 rounded mb-2"></div>
-        <div class="h-3 w-5/6 bg-mogno/10 rounded"></div>
+        <p class="text-borgonha mb-3">★★★★★</p>
+        <p class="text-mogno/80 text-sm leading-relaxed">"Do briefing ao lançamento, senti que a Ketlen entendeu a essência da minha marca antes de desenhar qualquer tela."</p>
       </div>
-      <div class="card p-7 animate-pulse hidden sm:block">
+      <div class="card p-7 reveal">
         <div class="flex items-center gap-3 mb-4">
-          <span class="avatar-circle bg-mogno/10"></span>
-          <div class="flex-1">
-            <div class="h-3 w-24 bg-mogno/10 rounded mb-2"></div>
-            <div class="h-2 w-16 bg-mogno/10 rounded"></div>
+          <span class="avatar-circle bg-manteiga text-borgonha">RB</span>
+          <div>
+            <p class="font-bold text-mogno text-sm leading-none">Cliente</p>
+            <p class="tag-label text-[0.6rem] mt-1">e-commerce de beleza</p>
           </div>
         </div>
-        <div class="h-3 w-full bg-mogno/10 rounded mb-2"></div>
-        <div class="h-3 w-5/6 bg-mogno/10 rounded"></div>
+        <p class="text-borgonha mb-3">★★★★★</p>
+        <p class="text-mogno/80 text-sm leading-relaxed">"O acompanhamento próximo fez toda diferença. Cada etapa foi conversada, e o resultado ficou muito acima do esperado."</p>
       </div>
-      <div class="card p-7 animate-pulse hidden md:block">
+      <div class="card p-7 reveal">
         <div class="flex items-center gap-3 mb-4">
-          <span class="avatar-circle bg-mogno/10"></span>
-          <div class="flex-1">
-            <div class="h-3 w-24 bg-mogno/10 rounded mb-2"></div>
-            <div class="h-2 w-16 bg-mogno/10 rounded"></div>
+          <span class="avatar-circle bg-borgonha/10 text-borgonha">LM</span>
+          <div>
+            <p class="font-bold text-mogno text-sm leading-none">Cliente</p>
+            <p class="tag-label text-[0.6rem] mt-1">home &amp; lifestyle</p>
           </div>
         </div>
-        <div class="h-3 w-full bg-mogno/10 rounded mb-2"></div>
-        <div class="h-3 w-5/6 bg-mogno/10 rounded"></div>
+        <p class="text-borgonha mb-3">★★★★★</p>
+        <p class="text-mogno/80 text-sm leading-relaxed">"A loja saiu no prazo, com um layout que realmente parece a nossa marca — e já converteu desde a primeira semana."</p>
       </div>
     </div>
 
-    <p class="flex items-center justify-center gap-2 text-center tag-label text-[0.6rem] mt-8">
-      <svg width="14" height="14" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/><path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/><path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/><path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/></svg>
-      avaliações via Google
-    </p>
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a href="https://www.google.com/maps?cid=6993040285009839849" target="_blank" rel="noopener" class="btn-outline">
+        <svg width="14" height="14" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/><path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/><path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/><path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/></svg>
+        Ver todas as avaliações
+      </a>
+      <a href="https://www.google.com/maps?cid=6993040285009839849" target="_blank" rel="noopener" class="btn-flat">
+        Deixar uma avaliação →
+      </a>
+    </div>
   </div>
 </section>
 
@@ -656,139 +656,6 @@
       observer.observe(el);
     });
   });
-</script>
-
-<!--
-  AVALIAÇÕES DO GOOGLE — como configurar:
-  1) apiKey  — crie em https://console.cloud.google.com/apis/credentials, ative a
-     "Maps JavaScript API" e restrinja a key ao domínio do seu site.
-  2) placeId — pegue em https://developers.google.com/maps/documentation/places/web-service/place-id
-     (busque "Ketlen Rodrigues Fashion E-commerce & Marketing" e copie o ID, formato ChIJ...).
-  3) mapsUrl — opcional: link direto do seu perfil no Google Maps, usado no botão "Ver todas".
-  Sem isso preenchido, a seção mostra automaticamente um estado de fallback.
--->
-<script>
-  var GOOGLE_REVIEWS_CONFIG = {
-    apiKey: 'AIzaSyA8yEI-HBbjDICz2b5LOk5obIS06NPnNOw',
-    placeId: 'SEU_PLACE_ID_AQUI',
-    mapsUrl: 'https://www.google.com/search?q=Ketlen+Rodrigues+Fashion+E-commerce+%26+Marketing'
-  };
-
-  (function () {
-    function escapeHtml(str) {
-      var div = document.createElement('div');
-      div.textContent = str || '';
-      return div.innerHTML;
-    }
-
-    function initials(name) {
-      return (name || '')
-        .split(' ')
-        .filter(Boolean)
-        .slice(0, 2)
-        .map(function (w) { return w[0].toUpperCase(); })
-        .join('');
-    }
-
-    function starsMarkup(rating) {
-      var full = Math.round(rating || 0);
-      var out = '';
-      for (var i = 0; i < 5; i++) out += i < full ? '★' : '☆';
-      return out;
-    }
-
-    function renderFallback() {
-      var summary = document.getElementById('google-reviews-summary');
-      var grid = document.getElementById('google-reviews-grid');
-      if (!summary || !grid) return;
-      summary.innerHTML = '';
-      grid.innerHTML =
-        '<div class="card p-8 md:col-span-3 text-center">' +
-        '  <p class="text-mogno/70 text-sm leading-relaxed mb-5">As avaliações reais do Google ainda não estão conectadas a esta página.</p>' +
-        '  <a href="' + GOOGLE_REVIEWS_CONFIG.mapsUrl + '" target="_blank" rel="noopener" class="btn-outline inline-flex">Ver avaliações no Google →</a>' +
-        '</div>';
-    }
-
-    function renderReviews(place) {
-      var summary = document.getElementById('google-reviews-summary');
-      var grid = document.getElementById('google-reviews-grid');
-      if (!summary || !grid) return;
-
-      var rating = place.rating || 0;
-      var total = place.user_ratings_total || 0;
-      var mapsUrl = place.url || GOOGLE_REVIEWS_CONFIG.mapsUrl;
-
-      summary.innerHTML =
-        '<div class="flex items-center gap-2">' +
-        '  <span class="text-3xl font-extrabold text-mogno">' + rating.toFixed(1) + '</span>' +
-        '  <span class="text-borgonha text-xl">' + starsMarkup(rating) + '</span>' +
-        '</div>' +
-        '<p class="tag-label">' + total + ' avaliações no Google</p>' +
-        '<a href="' + mapsUrl + '" target="_blank" rel="noopener" class="btn-outline mt-2 text-xs" style="padding:0.5rem 1rem;">Ver todas no Google →</a>';
-
-      var reviews = (place.reviews || []).slice(0, 6);
-      if (!reviews.length) {
-        renderFallback();
-        return;
-      }
-
-      grid.innerHTML = reviews.map(function (r) {
-        var photo = r.profile_photo_url;
-        var avatar = photo
-          ? '<img src="' + photo + '" alt="" class="avatar-circle object-cover" referrerpolicy="no-referrer">'
-          : '<span class="avatar-circle bg-rosa/30 text-borgonha">' + escapeHtml(initials(r.author_name)) + '</span>';
-        var text = r.text && r.text.length > 220 ? r.text.slice(0, 220) + '…' : (r.text || '');
-        return (
-          '<div class="card p-7">' +
-          '  <div class="flex items-center gap-3 mb-4">' +
-          avatar +
-          '    <div>' +
-          '      <p class="font-bold text-mogno text-sm leading-none">' + escapeHtml(r.author_name || 'Cliente Google') + '</p>' +
-          '      <p class="tag-label text-[0.6rem] mt-1">' + escapeHtml(r.relative_time_description || '') + '</p>' +
-          '    </div>' +
-          '  </div>' +
-          '  <p class="text-borgonha mb-3">' + starsMarkup(r.rating || 5) + '</p>' +
-          '  <p class="text-mogno/80 text-sm leading-relaxed">' + escapeHtml(text) + '</p>' +
-          '</div>'
-        );
-      }).join('');
-    }
-
-    window.initGoogleReviews = function () {
-      try {
-        var service = new google.maps.places.PlacesService(document.createElement('div'));
-        service.getDetails({
-          placeId: GOOGLE_REVIEWS_CONFIG.placeId,
-          fields: ['name', 'rating', 'user_ratings_total', 'reviews', 'url']
-        }, function (place, status) {
-          if (status === google.maps.places.PlacesServiceStatus.OK && place) {
-            renderReviews(place);
-          } else {
-            renderFallback();
-          }
-        });
-      } catch (e) {
-        renderFallback();
-      }
-    };
-
-    document.addEventListener('DOMContentLoaded', function () {
-      var isConfigured =
-        GOOGLE_REVIEWS_CONFIG.apiKey.indexOf('SUA_API_KEY') === -1 &&
-        GOOGLE_REVIEWS_CONFIG.placeId.indexOf('SEU_PLACE_ID') === -1;
-
-      if (!isConfigured) {
-        renderFallback();
-        return;
-      }
-
-      var script = document.createElement('script');
-      script.src = 'https://maps.googleapis.com/maps/api/js?key=' + encodeURIComponent(GOOGLE_REVIEWS_CONFIG.apiKey) + '&libraries=places&callback=initGoogleReviews';
-      script.async = true;
-      script.onerror = renderFallback;
-      document.head.appendChild(script);
-    });
-  })();
 </script>
 
 </body>

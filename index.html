@@ -216,6 +216,37 @@
     width:2px;
     background:var(--linha);
   }
+  .no-scrollbar{
+    scrollbar-width:none;
+    -ms-overflow-style:none;
+  }
+  .no-scrollbar::-webkit-scrollbar{
+    display:none;
+  }
+  .carousel-arrow{
+    position:absolute;
+    top:45%;
+    transform:translateY(-50%);
+    width:44px;
+    height:44px;
+    border-radius:50%;
+    background:#fff;
+    border:1px solid var(--linha);
+    align-items:center;
+    justify-content:center;
+    font-size:1.4rem;
+    line-height:1;
+    color:var(--borgonha);
+    cursor:pointer;
+    box-shadow:var(--shadow-sm);
+    transition:box-shadow 0.25s ease, transform 0.25s ease;
+    z-index:10;
+  }
+  .carousel-arrow:hover{
+    box-shadow:var(--shadow-md);
+  }
+  .carousel-arrow.prev{ left:-8px; }
+  .carousel-arrow.next{ right:-8px; }
 </style>
 </head>
 <body class="antialiased">
@@ -550,8 +581,10 @@
       <span class="tag-label">· 5 avaliações no Google</span>
     </div>
 
-    <div class="grid md:grid-cols-3 gap-6 mb-10">
-      <div class="card p-7 reveal">
+    <div class="relative mb-10">
+      <button id="reviews-prev" class="carousel-arrow prev hidden sm:flex" aria-label="Avaliação anterior">‹</button>
+      <div id="reviews-carousel" class="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar px-1 py-1">
+      <div class="card p-7 reveal shrink-0 w-72 snap-center">
         <div class="flex items-center gap-3 mb-4">
           <span class="avatar-circle bg-mogno text-manteiga">É</span>
           <div>
@@ -562,7 +595,7 @@
         <p class="text-borgonha mb-3">★★★★★</p>
         <p class="text-mogno/80 text-sm leading-relaxed">"Incrível, atenciosa, competente, com olhar clínico aos detalhes. Pode confiar de olho fechado 🤍✨"</p>
       </div>
-      <div class="card p-7 reveal">
+      <div class="card p-7 reveal shrink-0 w-72 snap-center">
         <div class="flex items-center gap-3 mb-4">
           <span class="avatar-circle bg-rosa/30 text-borgonha">B</span>
           <div>
@@ -573,7 +606,7 @@
         <p class="text-borgonha mb-3">★★★★★</p>
         <p class="text-mogno/80 text-sm leading-relaxed">"Contratei a Ketlen para fazer o meu site e foi, sem dúvidas, uma das melhores experiências que já tive com esse tipo de serviço. Ela entregou um trabalho impecável, superou todas as minhas expectativas e me deu toda a assistência do início ao fim. Recomendo de olhos fechados!"</p>
       </div>
-      <div class="card p-7 reveal">
+      <div class="card p-7 reveal shrink-0 w-72 snap-center">
         <div class="flex items-center gap-3 mb-4">
           <span class="avatar-circle bg-manteiga text-borgonha">DA</span>
           <div>
@@ -584,7 +617,7 @@
         <p class="text-borgonha mb-3">★★★★★</p>
         <p class="text-mogno/80 text-sm leading-relaxed">"Excelente profissional! Amei o trabalho. O site ficou impecável, lindo, moderno e exatamente como eu imaginei. Atendimento atencioso, dedicação e muito capricho em cada detalhe. Recomendo de olhos fechados!"</p>
       </div>
-      <div class="card p-7 reveal">
+      <div class="card p-7 reveal shrink-0 w-72 snap-center">
         <div class="flex items-center gap-3 mb-4">
           <span class="avatar-circle bg-borgonha/10 text-borgonha">JA</span>
           <div>
@@ -595,7 +628,7 @@
         <p class="text-borgonha mb-3">★★★★★</p>
         <p class="text-mogno/80 text-sm leading-relaxed">"Ketlen, quero agradecer pelo ótimo trabalho no meu site. Eu amei o resultado, ficou lindo e do jeito que eu queria. Muito obrigada pela dedicação!"</p>
       </div>
-      <div class="card p-7 reveal">
+      <div class="card p-7 reveal shrink-0 w-72 snap-center">
         <div class="flex items-center gap-3 mb-4">
           <span class="avatar-circle bg-rosa/30 text-borgonha">JS</span>
           <div>
@@ -606,6 +639,8 @@
         <p class="text-borgonha mb-3">★★★★★</p>
         <p class="text-mogno/80 text-sm leading-relaxed">"Simplesmente incrível, atenciosa e prestativa, sempre dando todo suporte necessário! 💗"</p>
       </div>
+      </div>
+      <button id="reviews-next" class="carousel-arrow next hidden sm:flex" aria-label="Próxima avaliação">›</button>
     </div>
 
     <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -681,6 +716,19 @@
     revealEls.forEach(function (el) {
       observer.observe(el);
     });
+
+    var carousel = document.getElementById('reviews-carousel');
+    var prevBtn = document.getElementById('reviews-prev');
+    var nextBtn = document.getElementById('reviews-next');
+    if (carousel && prevBtn && nextBtn) {
+      var scrollByCard = function (direction) {
+        var card = carousel.querySelector('.card');
+        var step = card ? card.offsetWidth + 24 : 300;
+        carousel.scrollBy({ left: direction * step, behavior: 'smooth' });
+      };
+      prevBtn.addEventListener('click', function () { scrollByCard(-1); });
+      nextBtn.addEventListener('click', function () { scrollByCard(1); });
+    }
   });
 </script>
 
